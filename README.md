@@ -34,15 +34,17 @@ O workflow em `.github/workflows/ci-cd.yml` roda a cada push/PR na branch `main`
 
 ## Deploy (Passo 2)
 
-- Plataforma: Render (build via Dockerfile do repositório)
+- Plataforma: Render (build via Dockerfile do repositório, sem depender de Docker Hub)
 - URL de produção: https://devops-u4-deployobservabilidade-6jxc.onrender.com
+- O job `deploy` do workflow (`.github/workflows/ci-cd.yml`) só roda após lint+testes passarem e apenas na branch `main`; ele dispara o **Deploy Hook** do Render usando o secret `RENDER_DEPLOY_HOOK_URL`.
 
 ## Observabilidade (Passo 3)
 
-- Ferramenta: Better Uptime
-- Monitor: `/health`
-- Dashboard público: _a preencher_
+- Ferramenta: Better Uptime (Better Stack)
+- Monitor: `GET /health`, verificado a cada 3 minutos
+- Alerta configurado: e-mail em caso de indisponibilidade/timeout
+- Dashboard público: https://faculdade.betteruptime.com
 
 ## Reflexão técnica
 
-_A preencher no Passo 3._
+_A preencher._
