@@ -1,0 +1,22 @@
+{
+  "name": "devops-u4-deployobservabilidade",
+  "version": "1.0.0",
+  "description": "API simples usada na atividade da Unidade 4: pipeline de CI/CD, deploy automatizado e observabilidade em nuvem",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint .",
+    "test": "jest --coverage"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "globals": "^17.9.0",
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
+  }
+}
