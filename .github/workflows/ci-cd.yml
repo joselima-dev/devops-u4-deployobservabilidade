@@ -29,3 +29,13 @@ jobs:
 
       - name: Rodar testes
         run: npm test
+
+  deploy:
+    name: Deploy no Render
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Disparar deploy via Deploy Hook
+        run: curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"

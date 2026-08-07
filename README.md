@@ -35,7 +35,7 @@ O workflow em `.github/workflows/ci-cd.yml` roda a cada push/PR na branch `main`
 ## Deploy (Passo 2)
 
 - Plataforma: Render (build via Dockerfile do repositório)
-- URL de produção: _a preencher após o deploy_
+- URL de produção: https://devops-u4-deployobservabilidade-6jxc.onrender.com
 
 ## Observabilidade (Passo 3)
 
