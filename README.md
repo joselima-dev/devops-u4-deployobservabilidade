@@ -47,4 +47,4 @@ O workflow em `.github/workflows/ci-cd.yml` roda a cada push/PR na branch `main`
 
 ## Reflexão técnica
 
-_A preencher._
+Ver [reflexao-tecnica.md](reflexao-tecnica.md).
